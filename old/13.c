@@ -5,7 +5,7 @@
 #define print(a,b,c,d,e,f,n) printf("%s %s %s %d %d %d %d\n", a,b,c,d,e,f,n)
 #define scan_s(str) scanf("%s", str)
 #define scan_d(num) scanf("%d", num)
-
+#define MIN_SCORE 3
 
 
 struct student {
@@ -21,7 +21,7 @@ struct student {
 
 void outputStudents(struct student students[], int count) {
 	for (int j = 0; j < count; j++){
-		if (students[j].chemistry>=3){
+		if (students[j].chemistry>=MIN_SCORE){
 			students[j].chemistry = students[j].chemistry -1;
 		}
 	}
